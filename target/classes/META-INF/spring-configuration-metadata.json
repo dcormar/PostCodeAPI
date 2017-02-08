@@ -1,0 +1,38 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "controller.CustomProperties",
+      "name": "app.properties",
+      "type": "controller.CustomProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "controller.CustomProperties",
+      "name": "app.properties.apikey",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "controller.CustomProperties",
+      "name": "app.properties.endpointie",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "controller.CustomProperties",
+      "name": "app.properties.endpointuk",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "controller.CustomProperties",
+      "name": "app.properties.resource",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "controller.CustomProperties",
+      "name": "app.properties.server",
+      "description": "API URI for the IE\/UK PostCode service.",
+      "type": "java.lang.String"
+    }
+  ]
+}

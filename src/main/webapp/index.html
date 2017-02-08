@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<title>Address search by Post Code</title>
+<style>
+[ng:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}
+</style>
+</head>
+<body ng-app="postCodeModule" ng-controller="restController" ng-cloak>
+	<div class="container">
+		<h1>Address search by Post Code API</h1>
+		<form ng-submit="consumeAPI()">
+			Country (ie/uk): 
+			<select ng-model="form.country">
+  				<option value="ie">ie</option>
+  				<option value="uk">uk</option>
+  			</select>
+  			<br/>
+			Post Code: <input type="text" ng-model="form.postCode"> <input type="submit" value="Search">
+		</form>
+	</div>
+	<div ng-show="results==0">
+		<p >
+		<h2>Found {{results}} results:</h2>
+		</p>
+	</div>
+	<div ng-show="results<0">
+		<p>
+		<h2>No results found.</h2>
+		</p>
+	</div>
+	<div ng-repeat="address in addresses">
+		<p>
+			Address {{$index + 1}} details:<br /> {{address.summaryline}}
+		</p>
+	</div>	
+	
+	<script src="js/angularCode.js"></script>
+</body>
+</html>
